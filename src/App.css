@@ -1,38 +1,153 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background: linear-gradient(
+    90deg,
+    rgb(247, 245, 245) 0%,
+    rgb(198, 198, 212) 100%
+  );
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  width: 520px;
+  min-height: 600px;
+  background: #161a2b;
+  text-align: center;
+  margin: 128px auto;
+  border-radius: 10px;
+  padding-bottom: 32px;
+}
+.task-modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 520px;
+  min-height: 300px;
+  background: #161a2b;
+  text-align: center;
+  margin: 250px auto;
+  border-radius: 10px;
+  padding-bottom: 32px;
+}
+h1 {
+  margin: 36px 0;
+  color: #fff;
+  font-size: 28px;
+}
+h2 {
+  margin: 32px 0;
+  color: #fff;
+  font-size: 20px;
+}
+
+.complete {
+  text-decoration: line-through;
+  opacity: 0.4;
+}
+
+.task-form {
+  margin-bottom: 32px;
+}
+
+.task-input {
+  padding: 14px 32px 14px 16px;
+  border-radius: 4px 0 0 4px;
+  border: 2px solid rgba(20, 159, 255, 1);
+  outline: none;
+  width: 320px;
+  background: transparent;
+  color: #fff;
+  margin-right: 5px;
+}
+
+.task-input::placeholder {
+  color: #e2e2e2;
+}
+
+.task-button {
+  padding: 16px;
+  border: none;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  background: linear-gradient(
+    90deg,
+    rgba(20, 159, 255, 1) 0%,
+    rgb(39, 118, 221) 100%
+  );
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.task-input.edit {
+  border: 2px solid #149fff;
+}
+
+.task-button.edit {
+  background: linear-gradient(
+    90deg,
+    rgba(20, 159, 255, 1) 0%,
+    rgb(39, 118, 221) 100%
+  );
+  padding: 16px 22px;
+}
+
+.task-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.task-row {
+  display: flex;
+  cursor: pointer;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 4px auto;
+  color: #fff;
+  background: linear-gradient(
+    90deg,
+    rgba(20, 159, 255, 1) 0%,
+    rgba(17, 122, 255, 1) 100%
+  );
+
+  padding: 16px;
+  border-radius: 5px;
+  width: 90%;
 }
 
-.App-link {
-  color: #61dafb;
+
+.icons {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+.empty-label {
+  padding: 80px;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.delete-icon {
+  margin-right: 5px;
+  color: #fff;
+}
+
+.close-icon {
+  margin-left: auto;
+  color: #fff;
+ 
+}
+
+.edit-icon {
+  color: #fff;
 }
